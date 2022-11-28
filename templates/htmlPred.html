@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<style>
+  .background-image {
+    background-image: url('/pexels-kourosh-qaffari-1583582.jpg');
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, .5);
+  }
+</style>
+
+<body style="background-color:#013827;">
+
+  <nav class="black lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Link</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Link</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <div style=" background-image: url('./pexels-kourosh-qaffari-1583582.jpg');background-size: cover;box-shadow:inset 0 0 0 2000px  rgba(0,0,0,.5);">
+    <div class="section no-pad-bot" id="index-banner">
+      <div class="container">
+        <br><br>
+        <h1 class="header center white-text">BPD Solution</h1>
+        <div class="row center">
+          <h5 class="header col s12 white-text">Predict the probability of Bipolar Disorder
+            <br>
+          </h5>
+        </div>
+
+        <div class="row">
+          <form action='/predict' method="POST" class="col s12">
+            <div class="row">
+              <div class="input-field col s4">
+                <label for="first_name"><b>Your Mood Condition:</b></label>
+                <br>
+                <input id="first_name" class="white-text" name='Mood' type="text" class="validate">
+              </div>
+              <div class="input-field col s4">
+
+                <label for="last_name"><b>Motivation: </b></label>
+                <br>
+                <input id="last_name" class="white-text" name="Motivation" type="text" class="validate">
+
+              </div>
+
+              <div class="input-field col s4">
+                <label for="_name"><b>Attention:</b></label>
+                <br>
+                <input id="_name" class="white-text" name="Attention" type="text" class="validate">
+
+              </div>
+
+              <div class="input-field col s4">
+                <label for="_name1"><b>Irritability Condition:</b></label>
+                <br>
+                <input id="_name1" class="white-text" name="Irritability" type="text" class="validate">
+
+              </div>
+
+              <div class="input-field col s4">
+                <label for="_name2"><b>Anxiety</b></label>
+                <br>
+                <input id="_name2" class="white-text" name="Anxiety" type="text" class="validate">
+
+              </div>
+
+              <div class="input-field col s4">
+                <label for="_name3"><b>Sleep quality:</b></label>
+                <br>
+                <input id="_name3" class="white-text" name="sleep_quality" type="text" class="validate">
+
+              </div>
+
+              <div class="input-field col s4">
+                <label for="_name4"><b>Number of cigarettes:</b></label>
+                <br>
+                <input id="_name4" class="white-text" name="nr_cigarettes" type="text" class="validate">
+
+              </div>
+
+              <div class="input-field col s4">
+                <label for="_name5"><b>Caffeine Amount: </b></label>
+                <br>
+                <input id="_name5" class="white-text" name="caffeine	" type="text" class="validate">
+
+              </div>
+
+              <div class="input-field col s4">
+                <label for="_name6"><b>Do you have alcohol:</b></label>
+                <br>
+                <input id="_name6" class="white-text" name="alcohol	" type="text" class="validate">
+
+              </div>
+
+              <div class="input-field col s4">
+                <label for="_name7"><b>other drugs: </b></label>
+                <br>
+                <input id="_name7" class="white-text" name="other drugs	" type="text" class="validate">
+
+              </div>
+
+              <div class="input-field col s4">
+                <label for="_name8"><b>Your active time:</b></label>
+                <br>
+                <input id="_name8" class="white-text" name="active time	" type="text" class="validate">
+
+              </div>
+
+
+            </div>
+
+            <div class="row center">
+
+              <button type="submit" class="btn-large waves-effect waves-light">Predict Probability</button>
+            </div>
+          </form>
+        </div>
+
+        <br>
+        <h4 class="white-text" align="center" <b>{{pred}}</b></h4>
+        <br>
+
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="section">
+
+        <!--   Icon Section   -->
+        <div class="row">
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+              <h5 class="white-text center">Write your Thought Diary</h5>
+
+              <p class="white-text center">What is in your mind?</p>
+            </div>
+
+            <div class="row center">
+              <a href="note.html"><button class="btn waves-effect waves-light" type="submit" name="action">Write here..
+                </i>
+                </button>
+              </a>
+            </div>
+
+          </div>
+
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
+              <h5 class="center white-text">Text your Consultant</h5>
+
+              <p class="white-text center">We hope you have a better day today.</p>
+            </div>
+            <div class="row center">
+              <button class="btn waves-effect waves-light" type="submit" name="action">Consultant A
+                <i class="material-icons right">send</i>
+              </button>
+              <button class="btn waves-effect waves-light" type="submit" name="action">Consultant B
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
+
+          </div>
+
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
+              <h5 class="white-text center">Check on Map</h5>
+
+              <p class="white-text center">Book your suitable slot and visit your consultant..</p>
+            </div>
+          </div>
+          <div class="row center">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Consultant A
+              <i class="material-icons right">send</i>
+            </button>
+            <button class="btn waves-effect waves-light" type="submit" name="action">Consultant B
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+
+
+        </div>
+
+      </div>
+      <br><br>
+    </div>
+  </div>
+
+
+
+  </div>
+
+  <footer class="page-footer black">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">BRACU,66-Mohakhali,Dhaka</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+</body>
+
+</html>

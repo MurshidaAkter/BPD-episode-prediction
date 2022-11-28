@@ -1,0 +1,52 @@
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Shadows+Into+Light'>
+  
+<style>
+  body {
+    background:#002b1c;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 30px;
+    overflow:hidden;
+  }
+
+  .notepad {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 0 0 9px 9px;
+    overflow: hidden;
+  }
+
+  .top {
+    width: 100%;
+    height: 45px;
+    background: #33842d;
+    border-radius: 4.5px 4.5px 0 0;
+    font-family: "Shadows Into Light", cursive;
+    color:#fff;
+    text-align: center;
+    font-size: 1.85em;
+    border-bottom: 3px solid #000;
+  }
+
+  .paper {
+    width: 100%;
+    height: 60vh;
+    padding: 35px 23px;
+    background: repeating-linear-gradient(#d7f1dd, #e6f6fd 31px, #7ab9cc 31px, #91c0c7 32px);
+    font-family: "Shadows Into Light", cursive;
+    line-height: 30px;
+    outline: 0;
+    font-size: 20px;
+  }
+</style>
+  
+<div class="notepad">
+  <div class="top">Thought Diary</div>
+  <div class="paper" contenteditable="true">
+
+
+  </div>
+</div>
